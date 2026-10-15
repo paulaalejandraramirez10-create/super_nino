@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación Ambiental | Super Niño: Bogotá en Alerta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        :root {
+            --azul-oscuro: #051937;
+            --azul-medio: #004d7a;
+            --azul-claro: #00bfd8;
+            --dorado: #ffd700;
+            --verde: #4ade80;
+            --verde-oscuro: #16a34a;
+            --blanco: #ffffff;
+        }
+        body {
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(22, 163, 74, 0.7)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--blanco);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(5, 25, 55, 0.92);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover, nav a.activa {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--verde);
+            border-bottom: 2px solid var(--verde);
+        }
+        main {
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: var(--verde);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            color: var(--verde);
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+        .imagen {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 1.5rem 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .destacado {
+            background: rgba(74, 222, 128, 0.12);
+            border-left: 4px solid var(--verde);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .pasos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .paso {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .paso-num {
+            width: 40px;
+            height: 40px;
+            background: var(--verde);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 0.8rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 25, 55, 0.95);
+            margin-top: 3rem;
+            border-top: 2px solid rgba(74, 222, 128, 0.3);
+        }
+        @media (max-width: 768px) {
+            nav ul { gap: 0.5rem; }
+            h1 { font-size: 1.8rem; }
+            .imagen { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="el-nino.html">🌊 El Niño</a></li>
+        <li><a href="supernino.html">🔥 Superniño</a></li>
+        <li><a href="graficos-datos.html">📊 Gráficos</a></li>
+        <li><a href="educacion-ambiental.html" class="activa">🌿 Educación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>🌿 Educación Ambiental</h1>
+
+    <img src="https://images.unsplash.com/photo-1518531973920-836d9d43e069?w=1200" 
+         alt="Naturaleza y conservación" class="imagen">
+
+    <div class="card">
+        <h2>🔬 Soy un Climatólogo</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            La <strong>meteorología</strong> estudia el tiempo a corto plazo: lluvia, viento, temperatura de cada día. En cambio, la <strong>climatología</strong> analiza el clima a largo plazo, interpretando datos de muchos años: precipitaciones, presión, temperatura del mar, entre otros.
+        </p>
+        <br>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            Los climatólogos trabajan en laboratorios, pero también viajan a zonas afectadas por desastres naturales —inundaciones, incendios, deslizamientos— para recopilar información real y ayudar a prevenir futuros daños.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🌍 Cambio Climático</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            El cambio climático es el calentamiento continuo del planeta debido a actividades humanas. Esto altera los ciclos de lluvia, reduce el agua disponible y aumenta la frecuencia de fenómenos fuertes como el Superniño.
+        </p>
+        
+        <div class="destacado">
+            <p><strong>En Bogotá y el barrio Ismael Perdomo:</strong> El cambio climático reduce el agua de embalses como Chingaza, cambia las épocas de lluvia y hace más urgente el ahorro del recurso. A medida que crece la población, la demanda de agua aumenta y el problema se agrava.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📊 Herramientas: Las Gráficas</h2>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=12

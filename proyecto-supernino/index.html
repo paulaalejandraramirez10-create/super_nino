@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Super Niño: Bogotá en Alerta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        :root {
+            --azul-oscuro: #051937;
+            --azul-medio: #004d7a;
+            --azul-claro: #00bfd8;
+            --dorado: #ffd700;
+            --naranja: #ff7a18;
+            --blanco: #ffffff;
+        }
+        body {
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(0, 77, 122, 0.9)), 
+                        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--blanco);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(5, 25, 55, 0.92);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover, nav a.activa {
+            background: rgba(255, 215, 0, 0.15);
+            color: var(--dorado);
+            border-bottom: 2px solid var(--dorado);
+        }
+        main {
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--dorado);
+            margin-bottom: 1rem;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        .hero .subtitulo {
+            font-size: 1.3rem;
+            color: var(--azul-claro);
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h2 {
+            color: var(--azul-claro);
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+        .imagen-principal {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 1.5rem 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .info-colegio {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(0, 191, 216, 0.1));
+            border-left: 4px solid var(--dorado);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 25, 55, 0.95);
+            margin-top: 3rem;
+            border-top: 2px solid rgba(0, 191, 216, 0.3);
+        }
+        @media (max-width: 768px) {
+            nav ul { gap: 0.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .imagen-principal { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html" class="activa">🏠 Inicio</a></li>
+        <li><a href="el-nino.html">🌊 El Niño</a></li>
+        <li><a href="supernino.html">🔥 Superniño</a></li>
+        <li><a href="graficos-datos.html">📊 Gráficos</a></li>
+        <li><a href="educacion-ambiental.html">🌿 Educación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="hero">
+        <h1>🌊 Super Niño: Bogotá en Alerta</h1>
+        <p class="subtitulo">Proyecto STEM — Colegio Ismael Perdomo IED</p>
+        <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+            Descubre cómo el clima cambia en nuestra ciudad y por qué el cuidado del agua empieza en nuestro barrio
+        </p>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200" 
+         alt="Paisaje y cambio climático" class="imagen-principal">
+
+    <div class="card info-colegio">
+        <h2>🏫 Nuestro Proyecto</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            En las últimas décadas, el cambio climático y el calentamiento global se han convertido en uno de los desafíos más urgentes para la humanidad. Fenómenos como el aumento de las temperaturas, la alteración en los patrones de lluvia y el impacto en el agua afectan directamente a Bogotá y al barrio Ismael Perdomo.
+        </p>
+        <br>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            Este proyecto explora la relación entre <strong>El Niño, el Superniño y el calentamiento global</strong>, analizando cómo afectan nuestra comunidad y qué acciones podemos tomar para proteger el agua y el medio ambiente.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🎯 ¿Qué encontrarás aquí?</h2>
+        <ul style="margin: 1rem 0 0 2rem; line-height: 2;">
+            <li>🌊 <strong>Qué es El Niño</strong> y cómo se forma</li>
+            <li>🔥 <strong>En qué se diferencia el Superniño</strong> y por qué es más fuerte</li>
+            <li>📊 <strong>Datos, gráficas y encuestas</strong> de nuestro barrio</li>
+            <li>🌿 <strong>Educación ambiental:</strong> acciones para cuidar el planeta</li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 — Colegio Ismael Perdomo IED | Proyecto STEM — Grado Noveno</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #aaa;">Jornada Tarde | Bogotá, Colombia</p>
+</footer>
+
+</body>
+</html>

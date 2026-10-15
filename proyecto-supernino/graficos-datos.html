@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos y Datos | Super Niño: Bogotá en Alerta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        :root {
+            --azul-oscuro: #051937;
+            --azul-medio: #004d7a;
+            --azul-claro: #00bfd8;
+            --dorado: #ffd700;
+            --verde: #4ade80;
+            --blanco: #ffffff;
+        }
+        body {
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(0, 77, 122, 0.9)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--blanco);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(5, 25, 55, 0.92);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover, nav a.activa {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--verde);
+            border-bottom: 2px solid var(--verde);
+        }
+        main {
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: var(--verde);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            color: var(--azul-claro);
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+        .grafico-caja {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        .grafico-caja:hover {
+            border-color: var(--verde);
+            background: rgba(74, 222, 128, 0.1);
+        }
+        .imagen {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 1.5rem 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 25, 55, 0.95);
+            margin-top: 3rem;
+            border-top: 2px solid rgba(74, 222, 128, 0.3);
+        }
+        @media (max-width: 768px) {
+            nav ul { gap: 0.5rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="el-nino.html">🌊 El Niño</a></li>
+        <li><a href="supernino.html">🔥 Superniño</a></li>
+        <li><a href="graficos-datos.html" class="activa">📊 Gráficos</a></li>
+        <li><a href="educacion-ambiental.html">🌿 Educación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>📊 Gráficos y Datos</h1>
+
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200" 
+         alt="Análisis de datos" class="imagen">
+
+    <div class="card">
+        <h2>🌡️ Evolución del Clima — Barrio Ismael Perdomo</h2>
+        <p>Visualiza aquí los cambios de temperatura y lluvia a lo largo de los años:</p>
+        
+        <div class="grafico-caja">
+            <h3>📈 Tendencia de Temperatura</h3>
+            <img src="grafica-temperatura.png" alt="Tendencia de temperatura" style="max-width: 100%; border-radius: 8px;">
+            <p style="font-size: 0.95rem; font-style: italic;">Conclusión: Se observa un aumento gradual de la temperatura.</p>
+        </div>
+
+        <div class="grafico-caja">
+            <h3>💧 Lluvias y Disponibilidad de Agua</h3>
+           <img src="grafica-lluvias.png" alt="Tendencia de temperatura" style="max-width: 100%; border-radius: 8px;">
+            <p style="font-size: 0.95rem; font-style: italic;">Conclusión: Los periodos de sequía son más largos y las lluvias más irregulares.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📊 Datos Climáticos</h2>
+        <p>En esta sección puedes agregar la información y gráficas que consideres importantes:</p>
+        
+        <div class="grafico-caja">
+            <h3>🌤️ Cambios en los patrones de lluvia</h3>
+            <img src="grafica-patrones-lluvia.png" alt="Tendencia de temperatura" style="max-width: 100%; border-radius: 8px;">
+
+        <div class="grafico-caja">
+            <h3>💧 Nivel de los embalses</h3>
+             <img src="grafica-embalses.png" alt="Tendencia de temperatura" style="max-width: 100%; border-radius: 8px;">
+
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 — Colegio Ismael Perdomo IED | Proyecto STEM</p>
+</footer>
+
+</body>
+</html>

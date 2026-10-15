@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superniño | Super Niño: Bogotá en Alerta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        :root {
+            --azul-oscuro: #051937;
+            --azul-medio: #004d7a;
+            --azul-claro: #00bfd8;
+            --dorado: #ffd700;
+            --rojo: #ef4444;
+            --naranja: #ff7a18;
+            --blanco: #ffffff;
+        }
+        body {
+            background: linear-gradient(rgba(5, 25, 55, 0.85), rgba(139, 30, 30, 0.8)), 
+                        url('https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=1400');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--blanco);
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(5, 25, 55, 0.92);
+            padding: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        nav a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover, nav a.activa {
+            background: rgba(255, 215, 0, 0.15);
+            color: var(--dorado);
+            border-bottom: 2px solid var(--dorado);
+        }
+        main {
+            padding: 3rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: var(--naranja);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            color: var(--naranja);
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+        .comparacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .col {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .normal {
+            background: rgba(0, 191, 216, 0.15);
+            border: 2px solid rgba(0, 191, 216, 0.4);
+        }
+        .super {
+            background: rgba(239, 68, 68, 0.15);
+            border: 2px solid rgba(239, 68, 68, 0.5);
+        }
+        .imagen {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 1.5rem 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .consejos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .consejo {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.2rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--dorado);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 25, 55, 0.95);
+            margin-top: 3rem;
+            border-top: 2px solid rgba(255, 122, 24, 0.3);
+        }
+        @media (max-width: 768px) {
+            nav ul { gap: 0.5rem; }
+            h1 { font-size: 1.8rem; }
+            .comparacion { grid-template-columns: 1fr; }
+            .imagen { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="el-nino.html">🌊 El Niño</a></li>
+        <li><a href="supernino.html" class="activa">🔥 Superniño</a></li>
+        <li><a href="graficos-datos.html">📊 Gráficos</a></li>
+        <li><a href="educacion-ambiental.html">🌿 Educación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>🔥 ¿Qué es el Superniño?</h1>
+
+    <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=1200" 
+         alt="Calentamiento extremo del océano" class="imagen">
+
+    <div class="card">
+        <h2>⚠️ Más fuerte, más intenso</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8;">
+            El <strong>Superniño</strong> no es un fenómeno distinto, sino la versión <strong>más intensa y peligrosa</strong> de El Niño. Se declara "Super" cuando el calentamiento del océano supera ciertos umbrales y los efectos climáticos se vuelven mucho más graves y prolongados.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Diferencia: El Niño vs. Superniño</h2>
+        <div class="comparacion">
+            <div class="col normal">
+                <h3 style="color: var(--azul-claro); margin-bottom: 1rem;">🌊 El Niño Normal</h3>
+                <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.9;">
+                    <li>Calentamiento moderado del mar</li>
+                    <li>Cambios predecibles</li>
+                    <li>Sequías o lluvias fuertes</li>
+                    <li>Menor impacto en embalses</li>
+                    <li>Duración: 6–12 meses</li>
+                </ul>
+            </div>
+            <div class="col super">
+                <h3 style="color: var(--rojo); margin-bottom: 1rem;">🔥 Superniño</h3>
+                <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.9;">
+                    <li>Calentamiento extremo del Pacífico</li>
+                    <li>Impactos más fuertes y largos</li>
+                    <li>Escasez de agua y emergencias</li>
+                    <li>Embalses como Chingaza bajan rápido</li>
+                    <li>Afectación grave a Bogotá</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💧 7 Consejos para enfrentarlo en Bogotá</h2>
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200" 
+             alt="Cuidado del agua" class="imagen">
+        
+        <div class="consejos">
+            <div class="consejo">
+                <strong>1. Ahorra agua</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Cierra la llave mientras te lavas los dientes o manos</p>
+            </div>
+            <div class="consejo">
+                <strong>2. Reporta fugas</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Avisa si ves tuberías rotas en el barrio</p>
+            </div>
+            <div class="consejo">
+                <strong>3. No enciendas fuego</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Evita quemas que puedan causar incendios</p>
+            </div>
+            <div class="consejo">
+                <strong>4. Reutiliza el agua</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Usa el agua de lavar para regar plantas</p>
+            </div>
+            <div class="consejo">
+                <strong>5. Cuida árboles</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Ayuda a mantener la vegetación del barrio</p>
+            </div>
+            <div class="consejo">
+                <strong>6. Infórmate bien</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Consulta fuentes oficiales, no rumores</p>
+            </div>
+            <div class="consejo">
+                <strong>7. Comparte</strong>
+                <p style="margin-top: 0.5rem; font-size: 0.95rem;">Enseña a familia y vecinos qué hacer</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 — Colegio Ismael Perdomo IED | Proyecto STEM</p>
+</footer>
+
+</body>
+</html>
